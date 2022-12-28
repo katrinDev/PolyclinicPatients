@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Посетители поликлиники</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Пациенты поликлиники
+        </h1>
+    </header>
+    <main>
+        <section>
+            <article>
+                <form action="javascript:saveForm()">
+
+                    <fieldset>
+                        <legend>Основные данные</legend>
+
+                        <div class="form-part" id="patient-data">
+
+                            <div class="info-block">
+
+                                <div class="input-label">
+                                    <label for="fio">ФИО пациента: </label>
+                                    <input type="text" id="fio" required>
+                                </div>
+                                
+                                <div class="input-label">
+                                    <label for="adress">Адрес проживания: </label>
+                                    <input type="text" id="adress" required>
+                                </div>
+
+                            </div>
+                            
+                            <div class="info-block">
+    
+                                <div class="input-label">
+                                    <label for="phone-number">Номер телефона: </label>
+                                    <input type="tel" id="phone-number" required>
+                                </div>
+    
+                                <div class="input-label">
+                                    <label for="inpatient">Стационарная помощь: </label>
+                                    <input type="checkbox" id="inpatient" value="true">
+                                </div>
+    
+                            </div>
+                        </div>
+
+                        <div class="form-part" id="btns-block">
+
+                            <div class="info-block btns2">
+                                <button type="submit">Добавить запись</button>
+                                <button type="reset">Очистить форму</button>
+                            </div>
+    
+                            <div class="info-block btns2">
+                                <button id="deleteBtn">Удалить запись</button>
+                                <button id = "showBtn">Показать записи</button>
+                            </div>
+    
+                            <div class="input-label" id="select-block">
+                                <label for="patient-id"> ID: </label>
+                                <select class="id" id="patient-id">
+                                </select>
+                            </div>
+    
+                            <div class="info-block btns2">
+                                <button id="inp-btn">Стационар</button>
+                            </div>
+                            
+                        </div>
+
+                    </fieldset>
+
+                    
+                    <fieldset>
+                        <legend>Дополнительное свойство</legend>
+
+                        <div class="form-part" id="add-part">
+                           
+                            <h5>Для добавления телефона учредителя, необходимо выбрать ID записи и ввести данные в поле, затем нажать кнопку</h5>
+                            <div class="input-label" id="select-block2">
+                                <label for="patient-id2"> ID: </label>
+                                <select class="id" id="patient-id2">
+                                </select>
+                            </div>
+
+                            <div class="info-block" id="add-tools">
+                                <div class="input-label">
+                                    <label for="phone2">Телефон учреждения: </label>
+                                    <input type="tel" id="phone2">
+                                </div>
+                                <button id="add-prop-btn">Добавить свойство</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                        
+                </form>
+            </article>
+            <article id="tarticle">
+                <table>
+                    <caption>Данные пациентов</caption>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>ФИО</th>
+                            <th>Адрес</th>
+                            <th>Телефон</th>
+                            <th>Стационарно</th>
+                            <th>Тел. учреждения</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
